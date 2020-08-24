@@ -27,9 +27,6 @@ import fb from '../../../../assets/images/facebook.png';
 import google from '../../../../assets/images/google.png';
 
 const login = () => {
-  const [phoneValue, setPhoneValue] = useState(null)
-  const [isValidNumber, setIsValidNumber] = useState(false)
-  const [cca2, setCca2] = useState('ng')
   const phoneRef = useRef(undefined);
 
   onPressFlag = () => {
@@ -38,7 +35,6 @@ const login = () => {
 
   selectCountry = (country) => {
     phone.selectCountry(country.iso2)
-    setCca2({ cca2: country.cca2 });
   }
 
   return (
