@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PhoneInput from 'react-native-phone-input';
+import PhoneInput from '../../react-native-phone-input';
 
 import { 
   Container, 
@@ -21,11 +21,6 @@ import {
   GoogleTextWapper, 
   GoogleTextView 
 } from './styles';
-
-import {
-  responsiveHeight,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
 
 import logo from '../../../../assets/images/logo.png';
 import fb from '../../../../assets/images/facebook.png';
@@ -63,16 +58,6 @@ const login = () => {
               placeholder: '0803 123 4567', 
               placeholderTextColor: '#797979' 
             }}
-            style={{
-              backgroundColor: '#fff',
-              height: responsiveHeight(6),
-              width: responsiveWidth(65),
-              bgColor: "#fff",
-              borderColor: '#ddd',
-              borderWidth: 2,
-              borderRadius: 5,
-              padding: 8,
-            }} 
             initialCountry='ng'
             ref={phoneRef}
           />

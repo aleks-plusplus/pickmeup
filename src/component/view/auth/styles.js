@@ -1,55 +1,55 @@
 import styled from 'styled-components/native';
 import {
-    responsiveHeight,
-    responsiveWidth,
-    responsiveFontSize
-  } from 'react-native-responsive-dimensions';
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize
+} from 'react-native-responsive-dimensions';
   
 import Text from '../../widget/text';
 import Image from '../../widget/image';
 import View from '../../widget/view';
 
 export const Container = styled(View)`
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 export const TopView = styled(View)`
   height: ${responsiveHeight(87)};
-    padding-left: ${responsiveWidth(10)};
-    padding-right: ${responsiveWidth(10)};
-    padding-top: ${responsiveHeight(9)};
-    background: #2667c9;
+  padding-left: ${responsiveWidth(10)};
+  padding-right: ${responsiveWidth(10)};
+  padding-top: ${responsiveHeight(9)};
+  background: #2667c9;
 `;
 
 export const Header = styled.View`
-    flex-direction: row;
-    align-items: center;
-    height: ${responsiveHeight(7)};
+  flex-direction: row;
+  align-items: center;
+  height: ${responsiveHeight(7)};
 `;
 
 export const Label = styled(Text)`
-    font-size: ${responsiveFontSize(5)};
-    margin-left: 12px;
-    color: white;
+  font-size: ${responsiveFontSize(5)};
+  margin-left: 12px;
+  color: white;
 `;
 
 export const ImageView = styled(Image)`
 `;
 
 export const TitleView = styled(Text)`
-    margin-top: ${responsiveHeight(6)}
-    font-size: ${responsiveFontSize(3.5)}
-    color: white;
+  margin-top: ${responsiveHeight(6)}
+  font-size: ${responsiveFontSize(3.5)}
+  color: white;
 `;
 
 export const DescView = styled(Text)`
-    margin-top: ${responsiveHeight(3)}
-    font-size: ${responsiveFontSize(3)}
-    line-height: ${responsiveHeight(4)}
-    color: white;
+  margin-top: ${responsiveHeight(3)}
+  font-size: ${responsiveFontSize(3)}
+  line-height: ${responsiveHeight(4)}
+  color: white;
 `;
 
 export const PhoneView = styled(View)`

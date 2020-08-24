@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, TextInput, TouchableWithoutFeedback, View } from "react-native";
+import { Image, TextInput, Text, TouchableWithoutFeedback, View } from "react-native";
 import PropTypes from "prop-types";
 
 import Country from "./country";
@@ -183,19 +183,26 @@ export default class PhoneInput extends Component {
   render() {
     const { iso2, inputValue, disabled } = this.state;
     const TextComponent = this.props.textComponent || TextInput;
+    const countryCode = this.getCountryCode();
     return (
       <View style={[styles.container, this.props.style]}>
         <TouchableWithoutFeedback
           onPress={this.onPressFlag}
           disabled={disabled}
         >
-          <Image
-            source={Flags.get(iso2)}
-            style={[styles.flag, this.props.flagStyle]}
-            onPress={this.onPressFlag}
-          />
+          <View style={styles.phoneCodeContainer}>
+            <Image
+              source={Flags.get(iso2)}
+              style={[styles.flag, this.props.flagStyle]}
+              onPress={this.onPressFlag}
+            />
+            <Text style={styles.countryCodeText}>+{countryCode}</Text>
+            <View style={styles.triangle} />
+          </View>
         </TouchableWithoutFeedback>
-        <View style={{ flex: 1, marginLeft: this.props.offset || 10 }}>
+        
+        <View style={styles.phoneTextView}>
+          
           <TextComponent
             ref={ref => {
               this.inputPhone = ref;
