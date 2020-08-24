@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 
 const Navigation = (user) => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="none">
       {isEmpty(user)  ? (
         <Stack.Screen name="LogIn" component={LoginScreen} />
       ) : (
